@@ -9,18 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Slider } from '@/components/ui/slider';
 import { Checkbox } from '@/components/ui/checkbox';
-import { 
-  Filter, 
-  Grid, 
-  List, 
-  Heart, 
-  Compare, 
-  Zap, 
-  Fuel, 
-  Award,
-  ChevronDown,
-  Search
-} from 'lucide-react';
+import { Filter, Grid, List, Heart, GitCompare as Compare, Zap, Fuel, Award, ChevronDown, Search } from 'lucide-react';
 
 const vehicles = [
   {

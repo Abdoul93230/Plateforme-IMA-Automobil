@@ -20,7 +20,8 @@ import {
   CreditCard,
   Search,
   Filter,
-  Calendar
+  Calendar,
+  Package
 } from 'lucide-react';
 
 const dealers = [

@@ -4,10 +4,10 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  FileText, 
-  Scale, 
-  AlertTriangle, 
+import {
+  FileText,
+  Scale,
+  AlertTriangle,
   Shield,
   CreditCard,
   Truck,
@@ -92,7 +92,7 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="bg-slate-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
@@ -116,13 +116,13 @@ export default function TermsPage() {
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-slate-800 mb-4">Préambule</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Les présentes conditions générales d'utilisation et de vente (ci-après "CGU/CGV") 
-                régissent l'utilisation du site internet IMA Automobil et les relations contractuelles 
+                Les présentes conditions générales d'utilisation et de vente (ci-après "CGU/CGV")
+                régissent l'utilisation du site internet IMA Automobil et les relations contractuelles
                 entre IMA Automobil et ses utilisateurs.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                IMA Automobil est une société par actions simplifiée au capital de 1 000 000 euros, 
-                immatriculée au RCS de Paris sous le numéro 123 456 789, dont le siège social est 
+                IMA Automobil est une société par actions simplifiée au capital de 1 000 000 euros,
+                immatriculée au RCS de Paris sous le numéro 123 456 789, dont le siège social est
                 situé 123 Avenue des Champs-Élysées, 75008 Paris.
               </p>
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
@@ -131,7 +131,7 @@ export default function TermsPage() {
                   <div>
                     <h4 className="font-semibold text-yellow-800 mb-1">Important</h4>
                     <p className="text-yellow-700 text-sm">
-                      L'utilisation de ce site implique l'acceptation pleine et entière de ces conditions. 
+                      L'utilisation de ce site implique l'acceptation pleine et entière de ces conditions.
                       Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser ce site.
                     </p>
                   </div>
@@ -165,10 +165,12 @@ export default function TermsPage() {
                   </div>
                 ) : (
                   <ul className="space-y-3">
-                    {section.content.map((item: string, idx: number) => (
+                    {section.content.map((item: any, idx: number) => (
                       <li key={idx} className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                        <p className="text-gray-600">{item}</p>
+                        <p className="text-gray-600">
+                          {typeof item === 'string' ? item : `${item.term}: ${item.definition}`}
+                        </p>
                       </li>
                     ))}
                   </ul>
@@ -227,8 +229,8 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-600 mb-4">
-                Conformément à l'article L. 221-18 du Code de la consommation, vous disposez d'un 
-                délai de 14 jours francs pour exercer votre droit de rétractation sans avoir à 
+                Conformément à l'article L. 221-18 du Code de la consommation, vous disposez d'un
+                délai de 14 jours francs pour exercer votre droit de rétractation sans avoir à
                 justifier de motifs ni à payer de pénalité.
               </p>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
@@ -250,8 +252,8 @@ export default function TermsPage() {
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-slate-800 mb-4">Limitation de responsabilité</h2>
               <p className="text-gray-600 mb-4">
-                IMA Automobil s'efforce de fournir des informations exactes et à jour sur le Site. 
-                Cependant, nous ne pouvons garantir l'exactitude, la complétude ou l'actualité de 
+                IMA Automobil s'efforce de fournir des informations exactes et à jour sur le Site.
+                Cependant, nous ne pouvons garantir l'exactitude, la complétude ou l'actualité de
                 toutes les informations.
               </p>
               <p className="text-gray-600 mb-4">
@@ -273,11 +275,11 @@ export default function TermsPage() {
             <CardContent className="p-8">
               <h2 className="text-2xl font-bold text-slate-800 mb-4">Droit applicable et juridiction</h2>
               <p className="text-gray-600 mb-4">
-                Les présentes CGU/CGV sont soumises au droit français. En cas de litige, les tribunaux 
+                Les présentes CGU/CGV sont soumises au droit français. En cas de litige, les tribunaux
                 français seront seuls compétents.
               </p>
               <p className="text-gray-600">
-                Avant tout recours contentieux, nous vous invitons à nous contacter pour rechercher 
+                Avant tout recours contentieux, nous vous invitons à nous contacter pour rechercher
                 une solution amiable. Vous pouvez également recourir à la médiation de la consommation.
               </p>
             </CardContent>
@@ -290,7 +292,7 @@ export default function TermsPage() {
             <CardContent className="p-8 text-center">
               <h2 className="text-2xl font-bold mb-4">Questions juridiques ?</h2>
               <p className="text-gray-300 mb-6">
-                Pour toute question concernant ces conditions d'utilisation, 
+                Pour toute question concernant ces conditions d'utilisation,
                 notre service juridique est à votre disposition.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
